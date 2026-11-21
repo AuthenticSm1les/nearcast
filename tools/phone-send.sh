@@ -9,7 +9,7 @@
 # to replace any cached entry first. The text must not contain spaces, since
 # adb shell splits it again. Exit 2 means the phone showed a pairing prompt.
 text=${1:-nearcast-test}
-name=${NEARCAST_NAME:-$(hostname)}
+name=${NEARCAST_NAME:-$(uname -n)}
 ui() { adb shell uiautomator dump /sdcard/ui.xml >/dev/null && adb shell cat /sdcard/ui.xml; }
 adb shell input keyevent KEYCODE_WAKEUP
 adb shell input keyevent KEYCODE_HOME

@@ -1,14 +1,17 @@
 # nearcast
 
-Quick Share (Nearby Share) for Linux. nearcast lets a Linux computer send and
-receive files, text and Wi-Fi networks to and from Android phones, over the
-local network, over Bluetooth when there is no network, and over Wi-Fi Direct
-for speed.
+**Quick Share for Linux.** nearcast makes a Linux computer show up in the
+Quick Share sheet of Android phones (Google's Quick Share, formerly Nearby
+Share, and Samsung's Quick Share), and lets it share back to them. Files,
+text and Wi-Fi networks go both ways, over the local network, over Bluetooth
+when there is no network, and over Wi-Fi Direct for speed. No app is needed
+on the phone and no Google account on the computer.
 
 It is a small per-user daemon, `nearcastd`, with a command-line client,
-`nearcast`. Front ends talk to the same daemon over a local socket. nearcast
-speaks Google's Nearby Connections and Nearby Sharing protocol as phones do,
-in "everyone" visibility mode, so no Google account is involved.
+`nearcast`; front ends can drive the same daemon over a local socket. It
+speaks Google's Nearby Connections and Nearby Sharing protocol the way phones
+do, in "everyone" visibility mode. nearcast is inspired by
+[rquickshare](https://github.com/Martichou/rquickshare).
 
 <p align="center">
   <img src="docs/media/demo.gif" alt="nearcast listing devices, sending a video and accepting two photos" width="720">
