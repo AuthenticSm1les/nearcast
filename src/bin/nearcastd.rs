@@ -10,7 +10,7 @@ struct Args {
     /// Name shown to other devices [default: the host name]
     #[arg(long)]
     name: Option<String>,
-    /// Where received files go [default: the XDG download directory]
+    /// Where received files go [default: "Quick Share" in the XDG download directory]
     #[arg(long)]
     download_dir: Option<PathBuf>,
     /// Start hidden from other devices
@@ -52,7 +52,7 @@ async fn main() -> anyhow::Result<()> {
     });
     let download_dir = args.download_dir.unwrap_or_else(|| {
         directories::UserDirs::new()
-            .map(|u| u.download_dir().unwrap_or(u.home_dir()).to_path_buf())
+            .map(|u| u.download_dir().unwrap_or(u.home_dir()).join("Quick Share"))
             .unwrap_or_else(|| PathBuf::from("."))
     });
     let upgrades = args

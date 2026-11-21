@@ -169,7 +169,7 @@ starting a group there, outright or because it's IR-concurrent, otherwise a
 2.4 GHz social channel. Sharing the station's channel matters: a group on a
 second band next to a 5 GHz station has crashed an Intel 8265's firmware.
 netd tries the channels in that order and takes the first group
-wpa_supplicant agrees to start; the system wpa_supplicant (2.11) has refused
+wpa_supplicant agrees to start; the system wpa_supplicant (2.12) has refused
 an IR-concurrent 5 GHz channel, answering GroupAdd with a generic
 InvalidArgs, so the group fell back to 2.4 GHz.
 

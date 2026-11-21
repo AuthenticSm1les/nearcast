@@ -92,7 +92,8 @@ nearcast status
 nearcast visible off
 ```
 
-Received files go to the XDG download directory. `nearcastd --help` lists the
+Received files go to `Quick Share` in your download directory
+(`~/Downloads/Quick Share`), as on Android. `nearcastd --help` lists the
 daemon's options: the name shown to phones, the download directory, starting
 hidden, Bluetooth only (`--no-lan`), and which upgrades to offer
 (`--upgrade lan,wifi-direct,hotspot`, the default, or `none`).
