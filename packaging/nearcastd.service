@@ -1,0 +1,11 @@
+[Unit]
+Description=Quick Share daemon (nearcast)
+Documentation=https://github.com/AuthenticSm1les/nearcast
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/nearcastd
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

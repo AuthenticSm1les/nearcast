@@ -1,0 +1,16 @@
+[Unit]
+Description=nearcast Wi-Fi Direct helper
+Documentation=https://github.com/AuthenticSm1les/nearcast
+After=dbus.service
+
+[Service]
+Type=dbus
+BusName=org.nearcast.Netd1
+ExecStart=/usr/bin/nearcast-netd
+RuntimeDirectory=nearcast-netd
+RuntimeDirectoryMode=0700
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
